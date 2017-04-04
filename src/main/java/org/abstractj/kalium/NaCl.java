@@ -223,6 +223,12 @@ public class NaCl {
                 @Out byte[] message, @In byte[] ct, @In @u_int64_t int length,
                 @In byte[] nonce, @In byte[] shared);
 
+        int crypto_sign_ed25519_pk_to_curve25519(
+                @Out byte[] curve25519_pk, @In byte[] ed25519_pk);
+
+        int crypto_sign_ed25519_sk_to_curve25519(
+                @Out byte[] curve25519_sk, @In byte[] ed25519_sk);
+
         // ---------------------------------------------------------------------
         // Public-key cryptography: Public-key signatures
 
